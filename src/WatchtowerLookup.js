@@ -1,5 +1,3 @@
-$('body').append('<script src="https://raw.github.com/mjacobus/watchtower-bible-look-up/development/src/BibleReference.js" type="text/javascript"></script>');
-
 var references = [];
 
 $('.bodyTxt a.jsBibleLink').each(function(textNumber){

@@ -10,6 +10,7 @@ Extract bible references from the Watchtower weekly study.
 2. In the javascript console, run:
 
 ```javascript
+$('body').append('<script src="https://raw.github.com/mjacobus/watchtower-bible-look-up/development/src/BibleReference.js" type="text/javascript"></script>');
 $('body').append('<script src="https://raw.github.com/mjacobus/watchtower-bible-look-up/development/src/WatchtowerLookup.js" type="text/javascript"></script>');
 ```
 
@@ -19,7 +20,7 @@ If an error occours, it probably means the github raw file cannot load at the mo
 There are different DOM for some chapters:
 
 This works link http://www.jw.org/pt/publicacoes/biblia/1-reis/11#v-3
-Note, the entire versicle is wrapped with a #v-3 selector
+Note, the entire verse (1 King 11:3) is wrapped with a #v-3 selector
 
 ```html
 <p>
@@ -35,12 +36,18 @@ Note, the entire versicle is wrapped with a #v-3 selector
 		</sup>
 		<span class="style-b">das nações de que Jeová havia dito aos filhos de Israel: “Não deveis entrar no meio delas e elas mesmas não devem entrar no vosso meio; decerto inclinarão o vosso coração a seguir os seus deuses.” Foi a elas que Salomão se apegou para [as] amar.</span>
 	</span>
+
+	<!-- this is the target verse -->
+
 	<span id="v-3" class="verse scriptureHighlight">
 		<sup class="verseNum">
 			<a data-anchor="#v-3" href="/pt/publicacoes/biblia/1-reis/11#v-3">3</a>
 		</sup>
 		<span class="style-b">E ele veio a ter setecentas esposas, princesas, e trezentas concubinas; e suas esposas gradualmente lhe inclinaram o coração.</span>
 	</span>
+	
+	<!-- end of the target verse -->
+
 	<span id="v-4" class="verse">
 		<sup class="verseNum">
 			<a data-anchor="#v-4" href="/pt/publicacoes/biblia/1-reis/11#v-4">4</a>
@@ -63,7 +70,7 @@ Note, the entire versicle is wrapped with a #v-3 selector
 
 ```
 
-This does not http://www.jw.org/pt/publicacoes/biblia/salmos/34#v-3
+This does not http://www.jw.org/pt/publicacoes/biblia/salmos/34#v-3, since the verse (Psalms 34:3) not wrapped with a #v-3 container.
 
 ```html
 <p><span class='verse' id='v-3'></span></p>
